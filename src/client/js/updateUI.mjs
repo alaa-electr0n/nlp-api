@@ -5,6 +5,7 @@ export default function updateUI(data) {
             <p><strong>Polarity:</strong>${convertPolarity(data?.score_tag)}</p>
             <p><strong>Subjectivity:</strong>${data?.subjectivity}</p>
             <p><strong>Text Snippet:</strong>"${
+              data?.sentence_list?.[0]?.segment_list?.[0]?.text ||
               data?.sentence_list[0]?.text
             }"</p>
             <p><strong>Confidence:</strong>${convertConfidence(

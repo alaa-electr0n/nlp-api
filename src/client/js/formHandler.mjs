@@ -20,8 +20,10 @@ export const handleSubmit = async (event) => {
   }
 
   try {
-    // Show loading message
-    loadingDiv.style.display = "block";
+    setTimeout(() => {
+      // Show loading message
+      loadingDiv.style.display = "block";
+    }, 2000);
 
     const response = await fetch("http://localhost:3000/analyze", {
       method: "POST",
