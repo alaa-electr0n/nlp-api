@@ -1,0 +1,43 @@
+//variables
+:root {
+  //colors
+  --color-50: #f0f7fe;
+  --color-100: #ddecfc;
+  --color-200: #c3defa;
+  --color-300: #9bcaf5;
+  --color-400: #6badef;
+  --color-500: #5394ea;
+  --color-600: #3371dd;
+  --color-700: #2a5ccb;
+  --color-800: #284ba5;
+  --color-900: #264382;
+  --color-950: #1b2a50;
+  //text
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --default-text-size: 1.6rem;
+  --meduim-text-size: 1.8rem;
+  --large-text-size: 2.4rem;
+
+  //spacing
+  --default-spacing: 0.8rem;
+  --meduim-spacing: 1.6rem;
+  --large-spacing: 2.4rem;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--default-text-size);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-100);
+  color: var(--color-900);
+  height: 100dvh;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  //on-mobile-view
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

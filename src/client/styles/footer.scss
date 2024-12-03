@@ -1,0 +1,11 @@
+.footer {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--meduim-spacing) var(--large-spacing);
+  background-color: var(--color-900);
+  color: var(--color-50);
+  text-align: center;
+  font-weight: 600;
+}

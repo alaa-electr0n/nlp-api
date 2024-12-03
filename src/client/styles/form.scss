@@ -1,0 +1,60 @@
+form {
+  width: 100%;
+  & input {
+    width: 100%;
+    height: 6rem;
+    padding: calc(var(--default-spacing) * 2) calc(var(--default-spacing) * 3);
+    border: 0;
+    border-radius: 100px;
+
+    ::-webkit-input-placeholder {
+      color: var(--color-300);
+    }
+    //on focus
+    &:focus {
+      outline: 3px solid var(--color-600);
+      outline-offset: 0.5rem;
+    }
+  }
+  & button {
+    padding: calc(var(--default-spacing) * 1) calc(var(--default-spacing) * 2);
+    border: 0;
+    border-radius: 100px;
+    text-transform: uppercase;
+    background-color: var(--color-950);
+    color: var(--color-50);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--meduim-text-size);
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    overflow: hidden;
+    outline: none;
+    //on hover
+    &:hover {
+      background-color: var(--color-600);
+      color: var(--color-50);
+    }
+    &:focus {
+      outline: 3px solid var(--color-600);
+      outline-offset: 0.5rem;
+    }
+  }
+}
+
+//in mobile view
+@media (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    & input {
+      padding: var(--default-spacing) calc(var(--meduim-spacing) * 2);
+    }
+    & button {
+      padding: var(--default-spacing) var(--meduim-spacing);
+      position: relative;
+    }
+  }
+}
