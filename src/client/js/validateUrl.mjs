@@ -11,4 +11,4 @@ function validateURL(inputText) {
   return urlPattern.test(inputText);
 }
 
-export { validateURL };
+module.exports = { validateURL };

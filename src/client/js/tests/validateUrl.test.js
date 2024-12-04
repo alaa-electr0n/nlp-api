@@ -1,4 +1,4 @@
-import { validateURL } from "../validateUrl.mjs";
+const { validateURL } = require("../validateUrl");
 
 describe("Testing the validateURL functionality", () => {
   test("It should return true for valid URLs", () => {
